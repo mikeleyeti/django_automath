@@ -1,0 +1,13 @@
+.masqué {
+    display:none;
+}
+
+.en_cours {
+    display: inline;
+    font-size: 80px;
+}
+
+.affiché {
+    display: block;
+}
+
