@@ -1,8 +1,10 @@
+from django.conf.urls import url
 from django.urls import path
 
 from . import views
 
+app_name = "automath"
 urlpatterns = [
-    path('', views.get_config, name='index'),
-    path('<titre>/', views.detail, name='detail'),
+    url('^$', views.get_config , name='index'),
+    path('<titre>/', views.detail, name='detail')
 ]
