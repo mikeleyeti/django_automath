@@ -7,30 +7,17 @@ class Question(models.Model):
     Modèle de question
     """
 
-    # class Themes(models.TextChoices):
-    #     "Liste des thèmes accessibles"
-    #     ENTIERS = 'ENT', _('Entiers')
-    #     DECIMAUX = 'DEC', _('Démimaux')
-    #     RELATIFS = 'REL', _('Relatifs')
-    #     FRACTIONS = 'FRA', _('Fractions')
     class Theme(models.Model):
         THEME_CHOICES = [
             ('ENT', 'Entiers'),
             ('DEC', 'Démimaux'),
             ('REL', 'Relatifs'),
+            ('FON', 'Fonctions'),
+            ('LIT', 'Calc. Littéral'),
+            ('COM', 'Complexes'),
+            ('GEO', 'Géométrie'),
             ('FRA', 'Fractions')
         ]
-
-    #
-    # class Niveaux(models.TextChoices):
-    #     "Liste des niveaux proposés"
-    #     SIXIEME = "6eme", _('Sixième')
-    #     CINQUIEME = "5eme", _('Cinquième')
-    #     QUATRIEME = "4eme", _('Quatrième')
-    #     TROISIEME = "3eme", _('Troisième')
-    #     SECONDE = "2nde", _('Seconde')
-    #     PREMIERE = "1ere", _('Première')
-    #     TERMINALE = "Term", _('Terminale')
 
     class Niveaux(models.Model):
         THEME_NIVEAUX = [
